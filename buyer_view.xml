@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+	
+	<template id="assets_backend" name="mymodule assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/mymodule/static/src/css/book_style.css"/>
+            </xpath>
+        </template>
+		
+	
+	<record model="ir.ui.view" id="buyer_tree_view">
+		<field name="name">buyer.tree</field>
+		<field name="model">book.buyer</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Acquirenti">
+				<field name="name"/>
+				<field name="surname"/>
+				<field name="book_id"/>
+				<field name="born_date"/>
+			</tree>
+		</field>
+	</record>
+
+	
+	<record model="ir.ui.view" id="buyer_form_view">
+		<field name="name">buyer.form</field>
+		<field name="model">book.buyer</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Nuovo Acquirente">
+			    <span class="grassetto rosso"><strong>Nome</strong></span><field name="name"/>
+				<span class="grassetto rosso"><strong>Cognome</strong></span><field name="surname"/>
+				<span class="enfasi arancione"><em>Libri acquistati</em></span><field name="book_id"/>
+				<span class="enfasi arancione"><em>Data di Nascita</em></span><field name="born_date"/>
+			</form>
+		</field>
+	</record>
+
+	
+	<record model="ir.actions.act_window" id="action_buyer_form">
+		<field name="name">Lista degli Acquirenti</field>
+		<field name="res_model">book.buyer</field>
+	</record>
+
+	
+	
+	
+	<menuitem name="Buyers" parent="book_group_menu" id="buyer_menu_mainform" action="action_buyer_form"/>
+	
+	</data>
+</openerp>

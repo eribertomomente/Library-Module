@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+	
+	<template id="assets_backend" name="mymodule assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/mymodule/static/src/css/book_style.css"/>
+            </xpath>
+        </template>
+		
+	
+	<record model="ir.ui.view" id="book_tree_view">
+		<field name="name">book.tree</field>
+		<field name="model">book.book</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Book">
+				<field name="title"/>
+				<field name="author_id"/>
+				<field name="category_id"/>
+				<field name="desc"/>
+				<field name="pagesnumber"/>
+				<field name="buyer_id"/>
+			</tree>
+		</field>
+	</record>
+
+	
+	<record model="ir.ui.view" id="book_form_view">
+		<field name="name">book.form</field>
+		<field name="model">book.book</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Libri">
+				<span class="grassetto rosso"><strong>Titolo</strong></span> <field name="title"/>
+				<span class="grassetto rosso"><strong>Nome</strong></span> <field name="name"/>
+				<span class="enfasi blu"><em>Autore</em></span><field name="author_id"/>
+				<span class="enfasi blu"><em>Genere</em></span><field name="category_id"/>
+				<span class="enfasi verde"><em>Descrizione</em></span><field name="desc"/>
+				<span class="enfasi arancione"><em>Numero di Pagine</em></span><field name="pagesnumber"/>
+				<span class="enfasi arancione"><em>Record acquirenti</em></span><field name="buyer_id"/>
+			</form>
+		</field>
+	</record>
+
+	
+	<record model="ir.actions.act_window" id="action_book_form">
+		<field name="name">Lista dei Libri</field>
+		<field name="res_model">book.book</field>
+	</record>
+
+	
+	
+	<menuitem name="Book" id="book_menu" sequence="450" />
+	<menuitem name="Library" id="book_group_menu" parent="book_menu"/>
+	<menuitem name="Books" parent="book_group_menu" id="book_menu_mainform" action="action_book_form"/>
+	
+	</data>
+</openerp>

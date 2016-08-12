@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+	
+	<template id="assets_backend" name="mymodule assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/mymodule/static/src/css/book_style.css"/>
+            </xpath>
+        </template>
+		
+	
+	<record model="ir.ui.view" id="author_tree_view">
+		<field name="name">author.tree</field>
+		<field name="model">book.author</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Author">
+				<field name="nominative"/>
+				<field name="born_date"/>
+				<field name="book_id"/>
+				<field name="number_books"/>
+			</tree>
+		</field>
+	</record>
+
+	
+	<record model="ir.ui.view" id="author_form_view">
+		<field name="name">author.form</field>
+		<field name="model">book.author</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Author">
+				<span class="grassetto rosso"><strong>Nome</strong></span> <field name="name"/>
+				<span class="enfasi blu"><em>Cognome</em></span><field name="surname"/>
+				<span class="enfasi verde"><em>Data di nascita</em></span><field name="born_date"/>
+				<span class="enfasi verde"><em>libri</em></span><field name="book_id"/>
+				<span class="enfasi arancione"><em>Numero di pubblicazioni</em></span><field name="number_books"/>
+			</form>
+		</field>
+	</record>
+
+	
+	<record model="ir.actions.act_window" id="action_author_form">
+		<field name="name">Authors List</field>
+		<field name="res_model">book.author</field>
+	</record>
+
+	
+	
+	
+	<menuitem name="Authors" parent="book_group_menu" id="author_menu_mainform" action="action_author_form"/>
+	
+	</data>
+</openerp>

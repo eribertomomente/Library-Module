@@ -1,0 +1,24 @@
+.grassetto {
+	font-weight:bold;
+	font-size: 1.2em;
+}
+
+.enfasi{
+	font-style: italic;
+}
+
+.verde {
+	color: #04d63c;
+}
+
+.blu {
+	color: #0000ff;
+}
+
+.arancione {
+	color: #ff9600;
+}
+
+.rosso{
+	color: #ff0000;
+}
