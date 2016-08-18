@@ -1,5 +1,6 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-mymodule_access_employee_book,mymodule_employee_book,model_book_book,base.group_user,1,1,1,1
-mymodule_access_employee_author,mymodule_employee_author,model_book_author,base.group_user,1,1,1,1
-mymodule_access_employee_category,mymodule_employee_category,model_book_category,base.group_user,1,1,1,1
-mymodule_access_employee_buyer,mymodule_employee_buyer,model_book_buyer,base.group_user,1,1,1,1
+library_module_access_employee_book,library_module_employee_book,model_book_book,base.group_user,1,1,1,1
+library_module_access_employee_author,library_module_employee_author,model_book_author,base.group_user,1,1,1,1
+library_module_access_employee_category,library_module_employee_category,model_book_category,base.group_user,1,1,1,1
+library_module_access_employee_buyer,library_module_employee_buyer,model_book_buyer,base.group_user,1,1,1,1
+library_module_access_employee_nationality,library_module_employee_nationality,model_book_nationality,base.group_user,1,1,1,1

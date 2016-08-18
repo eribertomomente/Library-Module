@@ -3,9 +3,9 @@
 	<data>
 
 	
-	<template id="assets_backend" name="mymodule assets" inherit_id="web.assets_backend">
+	<template id="assets_backend" name="library_module assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/mymodule/static/src/css/book_style.css"/>
+                <link rel="stylesheet" href="/library_module/static/src/css/book_style.css"/>
             </xpath>
         </template>
 		
@@ -20,6 +20,7 @@
 				<field name="born_date"/>
 				<field name="book_id"/>
 				<field name="number_books"/>
+                <field name="nationality_id"/>
 			</tree>
 		</field>
 	</record>
@@ -31,11 +32,12 @@
 		<field name="type">form</field>
 		<field name="arch" type="xml">
 			<form string="Author">
-				<span class="grassetto rosso"><strong>Nome</strong></span> <field name="name"/>
-				<span class="enfasi blu"><em>Cognome</em></span><field name="surname"/>
-				<span class="enfasi verde"><em>Data di nascita</em></span><field name="born_date"/>
-				<span class="enfasi verde"><em>libri</em></span><field name="book_id"/>
-				<span class="enfasi arancione"><em>Numero di pubblicazioni</em></span><field name="number_books"/>
+				<span class="odoofont">Nome</span> <field name="name"/>
+				<span class="odoofont">Cognome</span><field name="surname"/>
+				<span class="odoofont">Data di nascita</span><field name="born_date"/>
+				<span class="odoofont">Libri</span><field name="book_id"/>
+				<span class="odoofont">Numero di pubblicazioni</span><field name="number_books"/>
+                <span class="odoofont">Nazionalita'</span><field name="nationality_id"/>
 			</form>
 		</field>
 	</record>

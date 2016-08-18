@@ -7,7 +7,6 @@ class book(models.Model):
     _rec_name = 'title'
     
     title = fields.Char(string='Titolo', size=30, required=True)
-    name = fields.Char(string='Nome', size=30, required=True)
     author_id = fields.Many2many('book.author', 'book_author_rel', 'book_id', 'author_id', 'Autori')
     category_id = fields.Many2many('book.category', 'book_category_rel', 'book_id', 'category_id', 'Genere')
     desc = fields.Text(string='Descrizione')

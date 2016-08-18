@@ -3,9 +3,9 @@
 	<data>
 
 	
-	<template id="assets_backend" name="mymodule assets" inherit_id="web.assets_backend">
+	<template id="assets_backend" name="library_module assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/mymodule/static/src/css/book_style.css"/>
+                <link rel="stylesheet" href="/library_module/static/src/css/book_style.css"/>
             </xpath>
         </template>
 		
@@ -33,13 +33,12 @@
 		<field name="type">form</field>
 		<field name="arch" type="xml">
 			<form string="Libri">
-				<span class="grassetto rosso"><strong>Titolo</strong></span> <field name="title"/>
-				<span class="grassetto rosso"><strong>Nome</strong></span> <field name="name"/>
-				<span class="enfasi blu"><em>Autore</em></span><field name="author_id"/>
-				<span class="enfasi blu"><em>Genere</em></span><field name="category_id"/>
-				<span class="enfasi verde"><em>Descrizione</em></span><field name="desc"/>
-				<span class="enfasi arancione"><em>Numero di Pagine</em></span><field name="pagesnumber"/>
-				<span class="enfasi arancione"><em>Record acquirenti</em></span><field name="buyer_id"/>
+				<span class="odoofont">Titolo</span> <field name="title"/>
+				<span class="odoofont">Autore</span><field name="author_id"/>
+				<span class="odoofont">Genere</span><field name="category_id"/>
+				<span class="odoofont">Descrizione</span><field name="desc"/>
+				<span class="odoofont">Numero di Pagine</span><field name="pagesnumber"/>
+				<span class="odoofont">Record acquirenti</span><field name="buyer_id"/>
 			</form>
 		</field>
 	</record>
@@ -52,7 +51,7 @@
 
 	
 	
-	<menuitem name="Book" id="book_menu" sequence="450" />
+	<menuitem name="Library" id="book_menu" sequence="450" />
 	<menuitem name="Library" id="book_group_menu" parent="book_menu"/>
 	<menuitem name="Books" parent="book_group_menu" id="book_menu_mainform" action="action_book_form"/>
 	

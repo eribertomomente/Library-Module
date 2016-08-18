@@ -1,2 +1,2 @@
-from . import book, author, category, buyer
+from . import book, author, category, buyer, nationality
 

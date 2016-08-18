@@ -3,9 +3,9 @@
 	<data>
 
 	
-	<template id="assets_backend" name="mymodule assets" inherit_id="web.assets_backend">
+	<template id="assets_backend" name="library_module assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/mymodule/static/src/css/book_style.css"/>
+                <link rel="stylesheet" href="/library_module/static/src/css/book_style.css"/>
             </xpath>
         </template>
 		
@@ -30,9 +30,9 @@
 		<field name="type">form</field>
 		<field name="arch" type="xml">
 			<form string="Nuovo Genere">
-				<span class="grassetto rosso"><strong>Genere</strong></span> <field name="name"/>
-				<span class="enfasi arancione"><em>Numero di libri di quel genere</em></span><field name="number_books"/>
-				<span class="enfasi arancione"><em>Lista libri</em></span><field name="book_id"/>
+				<span class="odoofont">Genere</span> <field name="name"/>
+				<span class="odoofont">Numero di libri di quel genere</span><field name="number_books"/>
+				<span class="odoofont">Lista libri</span><field name="book_id"/>
 			</form>
 		</field>
 	</record>
