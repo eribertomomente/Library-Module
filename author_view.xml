@@ -32,7 +32,7 @@
 		<field name="type">form</field>
 		<field name="arch" type="xml">
 			<form string="Author">
-				<span class="odoofont">Nome</span> <field name="name"/>
+				<span class="odoofont">Nome</span><field name="name"/>
 				<span class="odoofont">Cognome</span><field name="surname"/>
 				<span class="odoofont">Data di nascita</span><field name="born_date"/>
 				<span class="odoofont">Libri</span><field name="book_id"/>

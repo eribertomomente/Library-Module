@@ -17,7 +17,8 @@
 		<field name="arch" type="xml">
 			<tree string="Nazionalita'">
 				<field name="country"/>
-				<field name="author_ids"/>
+				<field name="author_ids" />
+				<field name="author_str" />
 			</tree>
 		</field>
 	</record>
@@ -31,6 +32,7 @@
 			<form string="Nuova Nazione">
 			    <span class="odoofont">Stato</span><field name="country"/>
 				<span class="odoofont">Autori</span><field name="author_ids"/>
+				<span class="odoofont">xxxxxxx</span><field name="author_str"/>
 			</form>
 		</field>
 	</record>

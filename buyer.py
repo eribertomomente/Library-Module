@@ -4,6 +4,7 @@ class buyer(models.Model):
 
     _name = "book.buyer"
     _description = "Buyer"
+    _rec_name = 'name'
     
     name = fields.Char(string='Nome', size=15, required=True)
     surname = fields.Char(string='Cognome', size=15, required=True)
