@@ -1,0 +1,61 @@
+  
+<record model="ir.actions.act_window" id="act_my_courses_tree">
+            <field name="name">My Course Tree</field>
+            <field name="res_model">openacademy.course</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+</record>
+
+
+   <record model="ir.ui.view" id="board_openacademy_form">
+            <field name="name">OpenAcademy Dashboard Form</field>
+            <field name="model">board.board</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="OpenAcademy Dashboard">
+                    <hpaned>
+                        <child1>
+                            <action string="My Courses" name="%(act_my_courses_tree)d"
+                                colspan="2" />                          
+                        </child1>
+                    </hpaned>
+                </form>
+            </field>
+        </record>
+
+<record model="ir.actions.act_window" id="openacademy_board">
+            <field name="name">OpenAcademy Dashboard</field>
+            <field name="res_model">board.board</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="board_openacademy_form" />
+        </record>
+
+<menuitem id="openacademy_menu" name="OpenAcademy"
+            action="openacademy_board" />
+
+  <record model="ir.ui.view" id="board_test_form">
+            <field name="name">Dashboard di Test</field>
+            <field name="model">book.nationality</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Test Dashboard">
+                    <hpaned>
+                        <child1>
+                            <action string="qualcosa" name="%(nationality_tree_view)d"
+                                colspan="2" />                          
+                        </child1>
+                    </hpaned>
+                </form>
+            </field>
+        </record>
+
+	<record model="ir.actions.act_window" id="test_board">
+            <field name="name">Dashboard di Test</field>
+            <field name="res_model">book.nationality</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="action_nationality_form" />
+        </record>

@@ -36,7 +36,6 @@
 				<span class="odoofont">Cognome</span><field name="surname"/>
 				<span class="odoofont">Data di nascita</span><field name="born_date"/>
 				<span class="odoofont">Libri</span><field name="book_id"/>
-				<span class="odoofont">Numero di pubblicazioni</span><field name="number_books"/>
                 <span class="odoofont">Nazionalita'</span><field name="nationality_id"/>
 			</form>
 		</field>
