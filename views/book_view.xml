@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+	
+	<template id="assets_backend" name="library_module assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/library_module/static/src/css/book_style.css"/>
+            </xpath>
+        </template>
+		
+	
+	<record model="ir.ui.view" id="book_tree_view">  <!-- Vista Tree del modello book -->
+		<field name="name">book.tree</field>
+		<field name="model">book.book</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Book">
+				<field name="title"/>
+				<field name="author_id"/>
+				<field name="category_id"/>
+				<field name="pagesnumber"/>
+				<field name="buyer_id"/>
+            </tree>
+		</field>
+	</record>
+
+	
+	<record model="ir.ui.view" id="book_form_view">  <!-- Vista Form del modello book -->
+		<field name="name">book.form</field>
+		<field name="model">book.book</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Libri">
+				<span class="odoofont">Titolo</span> <field name="title"/>
+				<span class="odoofont">Autore</span><field name="author_id"/>
+				<span class="odoofont">Genere</span><field name="category_id"/>
+				<span class="odoofont">Numero di Pagine</span><field name="pagesnumber"/>
+				<span class="odoofont">Record acquirenti</span><field name="buyer_id"/>
+			</form>
+		</field>
+	</record>
+
+	
+	<record model="ir.actions.act_window" id="action_book_form">
+		<field name="name">Lista dei Libri</field>
+		<field name="res_model">book.book</field>
+	</record>
+
+	
+	</data>
+</openerp>

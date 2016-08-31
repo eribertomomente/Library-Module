@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+	
+	<template id="assets_backend" name="library_module assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/library_module/static/src/css/book_style.css"/>
+            </xpath>
+        </template>
+		
+	
+	<record model="ir.ui.view" id="category_tree_view">  <!-- Vista Tree del modello category -->
+		<field name="name">category.tree</field>
+		<field name="model">book.category</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Genere">
+				<field name="name"/>
+				<field name="number_books"/>
+				<field name="book_str"/>
+			</tree>
+		</field>
+	</record>
+
+	
+	<record model="ir.ui.view" id="category_form_view">  <!-- Vista Tree del modello category -->
+		<field name="name">category.form</field>
+		<field name="model">book.category</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Nuovo Genere">
+				<span class="odoofont">Genere</span> <field name="name"/>
+				<span class="odoofont">Lista libri</span><field name="book_ids"/>
+			</form>
+		</field>
+	</record>
+
+	
+	<record model="ir.actions.act_window" id="action_category_form">
+		<field name="name">Lista dei Generi</field>
+		<field name="res_model">book.category</field>
+	</record>
+
+	
+	</data>
+</openerp>

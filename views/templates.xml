@@ -1,0 +1,39 @@
+<openerp>
+    <data>
+        <template id="index_of_authors">
+            <title>Authors</title>
+            
+           
+            
+            <h1>Lista degli autori con più di una pubblicazione</h1>
+            <table border="3"> 
+                <thead>
+                    <th>
+                        Autori
+                    </th>
+                    <th>
+                        Data di Nascita
+                    </th>
+                    <th>
+                        Numero pubblicazioni
+                    </th>
+                </thead>
+                <tbody>
+                    <t t-foreach="authors" t-as="n">                    
+                        <tr>
+                            <td style="text-align:center;">
+                                <t t-esc="n.nominative" />
+                            </td>
+                            <td style="text-align:center;">
+                                <t t-esc="n.born_date" />
+                            </td>
+                            <td style="text-align:center;">
+                                <t t-esc="n.number_books" />
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </template>
+    </data>
+</openerp>

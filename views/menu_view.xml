@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data>
+
+            <menuitem name="Library" id="book_menu" sequence="450" />
+                
+                <menuitem name="Library" id="book_group_menu" parent="book_menu"/>
+                    <menuitem name="Books" parent="book_group_menu" id="book_menu_mainform" action="action_book_form"/>
+                    <menuitem name="Authors" parent="book_group_menu" id="author_menu_mainform" action="action_author_form"/>
+                    <menuitem name="Categories" parent="book_group_menu" id="category_menu_mainform" action="action_category_form"/>
+                    <menuitem name="Buyers" parent="book_group_menu" id="buyer_menu_mainform" action="action_buyer_form"/>
+                    <menuitem name="Nationality" parent="book_group_menu" id="nationality_menu_mainform" action="action_nationality_form"/>
+	
+                <menuitem name="Dashboard" id="dashboard_group_menu" parent="book_menu"/>
+                    <menuitem name="Library Dashboard" parent="dashboard_group_menu" action="open_board_library" sequence="100" id="menu_board_library" icon="terp-graph"/>
+                
+                <menuitem name="Controllers" id="controller_group_menu" parent="book_menu"/>
+                    <menuitem name="Author Table" parent="controller_group_menu" action="open_author_table" id="author_table_controller" />  
+        </data>
+    </openerp>

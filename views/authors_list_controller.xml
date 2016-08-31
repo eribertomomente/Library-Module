@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <openerp>
+        <data>
+         
+         
+            <record model="ir.actions.act_url" id="open_author_table">      <!-- Azione che lancia il controller per la lista degli autori -->
+                <field name="name">Tabella Autori</field>
+                <field name="type">ir.actions.act_url</field>
+                <field name="target">new</field>
+                <field name="url" eval="'/cogito/library/authors_list'"/>
+            </record>
+            
+                    
+        </data>
+    </openerp>
