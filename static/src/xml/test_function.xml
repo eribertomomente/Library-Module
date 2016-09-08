@@ -9,11 +9,38 @@
     <t t-name="TestFunction">  
     
         <div>      
-            <button id="button" onclick="myFunction()">Click me</button>        
+            <h3>Pannello di controllo della procedura di ricalcolo</h3>
+        
+            <button id="button" onclick="myFunction()">Ricalcola il piano dei conti</button>     
+
+            <div style="display:none;" id="pannello_risultato">
+                numero di autori con più di una pubblicazione: <strong id="output_risultato"></strong>
+            </div>
+
+            
         </div>
         
         <script>
-            function myFunction() {}
+        function myFunction() {
+                openerp.session.rpc('/my_url/some_json', 
+                    {}
+                ).then(function (out) {         
+                                    
+                    console.log(out);
+                    
+                    $('#pannello_risultato').show();  
+                    
+                    
+                    if(out.result  == true){                        
+                        $('#output_risultato').text(out.number);
+                    }
+                    
+                    
+                }, function () {
+                    alert("qualcosa non va: " + out.message);
+                });
+        }
+        
         </script>
         
     </t>

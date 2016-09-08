@@ -19,16 +19,7 @@ openerp.library_module = function(instance, local) {
         },
         
     });
-    
-    //local.Json = instance.Widget.extend({
-    //    openerp.session.rpc('/my_url/some_json', 
-    //        {}
-    //    ).then(function (result) {
-    //        return "ciao"
-    //    }, function () {
-    //        return "non ciao"
-    //    });
-    
+
   
     instance.web.client_actions.add('test.table', 'instances.library_module.HomePage');
     instance.web.client_actions.add('test.function', 'instances.library_module.Prova');
