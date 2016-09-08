@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/library_module/static/src/js/library_module.js"/>
+    </xpath>
+            
+    <t t-name="TestFunction">  
+    
+        <div>      
+            <button id="button" onclick="myFunction()">Click me</button>        
+        </div>
+        
+        <script>
+            function myFunction() {}
+        </script>
+        
+    </t>
+    
+</templates>

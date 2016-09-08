@@ -46,7 +46,8 @@
 		<field name="name">Authors List</field>
 		<field name="res_model">book.author</field>
 	</record>
-
-	
+    
+       
+    
 	</data>
 </openerp>

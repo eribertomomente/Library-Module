@@ -16,5 +16,13 @@
                 
                 <menuitem name="Controllers" id="controller_group_menu" parent="book_menu"/>
                     <menuitem name="Author Table" parent="controller_group_menu" action="open_author_table" id="author_table_controller" />  
+        
+                <menuitem name="Actions" id="action_group_menu" parent="book_menu"/>
+                    <menuitem name="Author Table Button" parent="action_group_menu"  id="author_table_action_menuitem" action="action_test_template"/> 
+                    <menuitem name="Funzione in JS" parent="action_group_menu"  id="javascript_function_menuitem" action="function"/> 
+                
+            
+
+               
         </data>
     </openerp>

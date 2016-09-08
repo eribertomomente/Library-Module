@@ -1,9 +1,8 @@
 <openerp>
     <data>
         <template id="index_of_authors">
+        
             <title>Authors</title>
-            
-           
             
             <h1>Lista degli autori con più di una pubblicazione</h1>
             <table border="3"> 
@@ -33,7 +32,8 @@
                         </tr>
                     </t>
                 </tbody>
-            </table>
+            </table> 
         </template>
+         
     </data>
 </openerp>
